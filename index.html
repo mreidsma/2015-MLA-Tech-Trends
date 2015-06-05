@@ -264,7 +264,7 @@ $("option:contains('VARI')").text("VanAndel Research Institute");
 
 				<img src="img/newilliad.png" alt="New Illiad" />
 
-				<p><a href="https://github.com/gvsulib/Illiad/blob/master/include_footer.html#L357">github.com/gvsulib/Illiad/blob/master/include_footer.html#L357</a>a></p>
+				<p><a href="https://github.com/gvsulib/Illiad/blob/master/include_footer.html#L357">github.com/gvsulib/Illiad/blob/master/include_footer.html#L357</a></p>
 
 "
 				</section>
@@ -285,6 +285,154 @@ $("option:contains('VARI')").text("VanAndel Research Institute");
 				<img src="img/360linkpluscss.png" alt="Old 360 Link plus new CSS" />
 				</section>
 
+				<section>
+					<pre><code data-trim contenteditable>
+
+$('#resultsTable').find('tr').each(function(index) {
+	// Grab values from the results table
+	if(index !== 0) {
+	    if(format === 'Journal') {
+	        articleLinkdata[i] =
+	        $(this).find('#ArticleCL').find('a').attr('href');
+	        journalLinkdata[i] =
+	        $(this).find('#JournalCL').find('a').attr('href');
+
+	    } else { // Not a journal article
+			BookLinkdata[i] = 
+            $(this).find('#BookCL').find('a').attr('href');
+	    }
+	 ...
+
+
+				</code></pre>
+				</section>
+				<section>
+					<pre><code data-trim contenteditable>
+        // Date range
+        dateRangedata[i] = $(this).find('#DateCL').text();
+
+        // Database name
+        databaseNamedata[i] = $(this).find('#DatabaseCL').text();
+
+        // Database link
+        databaseLinkdata[i] = 
+        $(this).find('#DatabaseCL').find('a').attr('href');
+
+        i++;
+    }
+    results = index; // Get total number of results
+});
+
+
+
+				</code></pre>
+				</section>
+				<section>
+					<pre><code data-trim contenteditable>
+// Replace all the content
+$('#content').html('
+&lt;ul id="links"&gt;
+    &lt;li&gt;
+        &lt;a class="button" href="' + articleLink + '"&gt;
+            Full Text Online
+        &lt;/a&gt;
+    &lt;/li&gt;
+...
+');
+
+
+
+				</code></pre>
+				</section>
+
+				<section>
+
+				<img src="img/new360link.png" alt="New 360 Link" />
+				</section>
+
+				<section>
+
+				<img src="img/docdel-help.gif" alt="Help in 360 Link for doc delivery" width="800" />
+				</section>
+
+				<section>
+					<h2 class="blue">More Examples</h2>
+
+					<h3>(And Caveats)</h3>
+				</section>
+
+				<section>
+
+				<img src="img/opac-author.gif" alt="Placeholder in OPAC for author searches" /><br />
+
+				<pre><code data-trim contenteditable>
+
+$('select[name="searchtype"]').change(function() {
+	if($(this).val() == 'a') {
+	    $('input#searcharg').attr('placeholder', 'Last Name, First Name');
+	}
+});
+
+				</code></pre>
+				</section>
+
+				<section>
+
+				<img src="img/360linkprint.png" alt="Breaking out print in extra results" />
+				</section>
+
+				<section>
+
+				<img src="img/opac-journal.gif" alt="Journal requests" />
+				</section>
+
+				<section>
+
+				<img src="img/byu.png" alt="BYU Illiad" />
+				</section>
+
+				<section>
+
+				<img src="img/byu-illiad.gif" alt="BYU Illiad" /><br />
+				<p><a href="https://github.com/byuhbll/ILLiadPlus">github.com/byuhbll/ILLiadPlus</a></p>
+				</section>
+
+				<section fullscreen-img="img/rainbowunicorn.png" fullscreen-size="contain">
+				</section>
+
+				<section>
+
+				<h2><span class="blue">Javascript</span> doesn't always work.</h2>
+				</section>
+
+				<section>
+				<h2><span class="blue">Your Site</span> Might Load Slower</h2>
+				</section>
+
+				<section>
+
+				<h2><span class="blue">Vendor Changes</span> Might Break Your Code</h2>
+				</section>
+
+				<section>
+
+				<h2><span class="blue">Vendors</span> Might Not Make it Easy</h2>
+				</section>
+
+				<section>
+
+				<img src="img/summon2.png" alt="Summon settings" />
+				</section>
+
+
+
+				<section>
+
+				<h2><span class="blue">Thank</span>You</h2>
+				<h3>Questions?</h3>
+				<p><a href="mailto:reidsmam@gvsu.edu">reidsmam@gvsu.edu</a> :: <a href="http://twitter.com/mreidsma">@mreidsma</a></p>
+				<p style="margin-top: 3em;"><small>I'm also teaching a 4-week course on this for Infopeople: <a href="http://gvsu.edu/s/Uz">http://gvsu.edu/s/Uz</a> and writing a book on it for Libraries Unlimited (publication set for 2016)</small></p>
+				</section>
 			</div>
 
 		</div>
