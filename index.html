@@ -173,6 +173,118 @@ $('head').remove('link:last-child');
 				<img src="img/oldilliad.png" alt="Old Illiad" />
 				</section>
 
+				<section>
+					<pre><code data-trim contenteditable>
+
+var emptyTables, numArticles;
+
+if($('#electronic-articles').find('.row-message').find('td').text() == 
+"No Electronic Articles Received")
+{
+    // This is the home page, and the table is empty
+    emptyTables = emptyTables + 1;
+    numArticles = 0;
+
+    // Hide the electronic articles table
+    $('#electronic-articles').hide();
+} else {
+	// There are articles
+	var numArticles = 
+	$('electronic-articles').find('tbody').find('tr').length;
+}
+
+				</code></pre>
+				</section>
+
+				<section>
+
+				<img src="img/newilliad.png" alt="New Illiad" />
+				</section>
+
+				<section>
+
+				<img src="img/newilliadempty.png" alt="New Illiad" />
+				</section>
+
+				<section>
+
+				<img src="img/bookrequest.png" alt="Crummy book success message" /><br />
+
+				<pre><code data-trim contenteditable>
+
+$('.statusInformation').html('
+<b>Got it!</b> Loans from other libraries can take 1-2 weeks. 
+We&#8217;ll let you know when it&#8217;s here.
+');
+
+				</code></pre>
+				</section>
+
+				<section>
+
+				<img src="img/illiadfixed.png" alt="New Illiad" /><br />
+
+				<pre><code data-trim contenteditable>
+
+$('.statusInformation').html('
+<b>Got it!</b> Loans from other libraries can take 1-2 weeks. 
+We&#8217;ll let you know when it&#8217;s here.
+');
+
+				</code></pre>
+				</section>
+
+				<section>
+
+				<img src="img/illiadpickupold.png" alt="New Illiad" />
+				</section>
+
+				<section>
+
+				<img src="img/illiadpickupnew.png" alt="New Illiad" /><br />
+
+				<pre><code data-trim contenteditable>
+
+$("option:contains('LIB')").text("Mary Idema Pew Library @ Allendale");
+$("option:contains('STEEL')").text("Steelcase Library @ DeVos");
+$("option:contains('AWRI')").text("Annis Water Research Institute");
+$("option:contains('FREY')").text("Frey Learning Center @ CHS");
+$("option:contains('OCS')").text("Ship books to me");
+$("option:contains('VARI')").text("VanAndel Research Institute");
+
+				</code></pre>
+				</section>
+
+				<section>
+
+				<img src="img/oldilliadrenewal.png" alt="New Illiad" />
+				</section>
+
+				<section>
+
+				<img src="img/newilliad.png" alt="New Illiad" />
+
+				<p><a href="https://github.com/gvsulib/Illiad/blob/master/include_footer.html#L357">github.com/gvsulib/Illiad/blob/master/include_footer.html#L357</a>a></p>
+
+"
+				</section>
+
+				<section>
+					<h2 class="blue">Advanced</h2>
+
+					<h3>Replacing the Whole Thing</h3>
+				</section>
+
+				<section>
+
+				<img src="img/old360link.png" alt="Old 360 Link" />
+				</section>
+
+				<section>
+
+				<img src="img/360linkpluscss.png" alt="Old 360 Link plus new CSS" />
+				</section>
+
 			</div>
 
 		</div>
